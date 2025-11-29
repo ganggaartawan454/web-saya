@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banjir Bali</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .logo span {
+        color: darkred;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      section {
+        display: none;
+        padding: 40px;
+      }
+
+      section.active {
+        display: block;
+      }
+
+      .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 0;
+        background-color: #f9f9f9;
+      }
+
+      .hero-text {
+        max-width: 50%;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+
+      .hero-text p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .cta-button {
+        background-color: darkred;
+        color: white;
+        padding: 12px 20px;
+        text-decoration: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .hero-image img {
+        max-width: 400px;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      article {
+        margin-bottom: 30px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+      }
+
+      article img {
+        max-width: 350px;
+        height: auto;
+        margin: 5px 0;
+        border-radius: 8px;
+        display: block;
+      }
+
+      h1 {
+        color: darkred;
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          flex-direction: column;
+          text-align: center;
+        }
+        .hero-text,
+        .hero-image {
+          max-width: 100%;
+        }
+        .hero-image img {
+          margin-top: 20px;
+        }
+      }
+    </style>
+
+    <script>
+      function showSection(id) {
+        document
+          .querySelectorAll("section")
+          .forEach((sec) => sec.classList.remove("active"));
+
+        document.getElementById(id).classList.add("active");
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">BALI<span>TERKINI</span></div>
+      <nav>
+        <ul>
+          <li><a onclick="showSection('home')">Home</a></li>
+          <li><a onclick="showSection('berita')">Berita</a></li>
+          <li><a onclick="showSection('analisis')">Analisis</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HOME -->
+    <section id="home" class="active">
+      <div class="hero">
+        <div class="hero-text">
+          <h1>
+            Banjir Terparah di Bali Lumpuhkan Jalan & Timbulkan Korban Jiwa
+          </h1>
+          <p>
+            Hujan deras mengguyur Bali sejak Selasa (9/9/2025) malam hingga Rabu
+            (10/9/2025) pagi. Curah hujan ekstrem membuat sejumlah sungai meluap
+            dan sistem drainase tak mampu menampung air. Akibatnya, banjir besar
+            melanda enam kabupaten/kota di Bali.
+          </p>
+          <a onclick="showSection('berita')" class="cta-button">Lihat Berita</a>
+        </div>
+
+        <div class="hero-image"><img src="home.jpeg" /></div>
+      </div>
+    </section>
+
+    <!-- BERITA -->
+    <section id="berita">
+      <h1>Berita Terkini</h1>
+
+      <article>
+        <h2>Tanggapan Gubernur Bali</h2>
+        <img src=" tanggapan.jpeg" alt="Tanggapan Gubernur Bali" />
+        <p>
+          penyebab banjir hebat di Kota Denpasar, Bali, akibat masifnya alih
+          fungsi lahan. Koster menilai alih fungsi lahan lebih banyak terjadi di
+          wilayah Badung dan Gianyar. "Nggak juga, alih fungsi lahan kan di
+          Badung, Gianyar. Di Badung (alih fungsi lahan) di daerah-daerah Kuta
+          Utara. Ini (Denpasar) kan jauh," kata Koster saat ditemui di lokasi
+          pembongkaran ruko terdampak banjir di Jalan Sulawesi, Denpasar, Kamis
+          (11/9/2025).
+        </p>
+      </article>
+
+      <article>
+        <h2>Proses Evakuasi Warga</h2>
+        <img src="evakuasi.jpeg" alt="Evakuasi Warga" />
+        <p>
+          Kepolisian Daerah (Polda) Bali melakukan evakuasi terhadap korban saat
+          banjir terjadi di Denpasar dan Badung, Rabu (10/9/2025). Banjir di
+          beberapa wilayah Denpasar dan Badung disebabkan karena hujan sangat
+          deras hampir tanpa henti sejak dua hari sebelumnya. "Sejak subuh
+          hingga personel Polda Bali dan jajaran bergabung dengan Tim SAR dan
+          BPBD telah melakukan evakuasi terhadap para korban dan berusaha
+          menyelamatkan barang-barang milik warga yang terkena bencana," kata
+          Kabid Humas Polda Bali, Kombes Ariasandy, dalam keterangan
+        </p>
+      </article>
+
+      <article>
+        <h2>Korban</h2>
+        <img src="foto korban.jpeg" alt="Korban" />
+        <p>
+          Hingga sejauh ini, total korban jiwa pada banjir di Bali ini tercatat
+          sebanyak 18 orang," ujar Kepala Pusat Data, Informasi, dan Komunikasi
+          Kebencanaan BNPB Abdul Muhari, Rabu (17/9/2025). Ia menjelaskan bahwa
+          banjir tersebut juga menimbulkan kerusakan luas pada infrastruktur dan
+          rumah warga, dengan jumlah 6.309 kepala keluarga yang terdampak banjir
+          bandang disertai longsor pada awal September lalu.
+        </p>
+      </article>
+    </section>
+
+    <!-- ANALISIS -->
+    <section id="analisis">
+      <h1>Analisis Bencana</h1>
+
+      <div class="analisis-section">
+        <h2>Penyebab Utama</h2>
+        <p>
+          penyebab banjir hebat di Kota Denpasar, Bali, akibat masifnya alih
+          fungsi lahan. Koster menilai alih fungsi lahan lebih banyak terjadi di
+          wilayah Badung dan Gianyar. "Nggak juga, alih fungsi lahan kan di
+          Badung, Gianyar. Di Badung (alih fungsi lahan) di daerah-daerah Kuta
+          Utara. Ini (Denpasar) kan jauh," kata Koster saat ditemui di lokasi
+          pembongkaran ruko terdampak banjir di Jalan Sulawesi, Denpasar, Kamis
+          (11/9/2025).
+        </p>
+      </div>
+
+      <div class="analisis-section">
+        <h2>Dampak Jangka Panjang</h2>
+        <p>
+          Dampak jangka panjang dari banjir di Bali meliputi perlambatan
+          pertumbuhan ekonomi karena biaya pemulihan yang terus-menerus,
+          kerusakan infrastruktur yang mengganggu distribusi barang dan
+          investasi, serta kerentanan sektor pariwisata akibat citra negatif dan
+          ketidakpastian. Lingkungan juga terancam akibat degradasi lahan,
+          pencemaran air, dan peningkatan risiko bencana di masa mendatang
+          akibat tata kelola lahan yang buruk. Dampak ekonomi Perlambatan
+          pertumbuhan ekonomi: Biaya pemulihan yang berulang akan membebani
+          Anggaran Pendapatan dan Belanja Daerah (APBD) dan dapat menekan
+          pertumbuhan ekonomi daerah hingga 1–1,5% per tahun. Kerusakan
+          infrastruktur: Kerusakan jembatan, jalan, dan fasilitas publik
+          memerlukan biaya perbaikan besar dan dapat mengganggu distribusi
+          barang dan jasa. Penurunan daya tarik pariwisata: Sering terjadinya
+          banjir dapat mengurangi jumlah wisatawan, yang berimbas pada
+          pendapatan masyarakat yang bergantung pada sektor ini. Ketidakpastian
+          investasi: Investor mungkin menunda atau membatalkan proyek karena
+          tingginya risiko bencana, yang dapat menghambat pembangunan jangka
+          panjang. Dampak sosial dan lingkungan Kerentanan sosial: Masyarakat
+          yang bergantung pada sektor pariwisata akan mengalami kerugian
+          pendapatan harian yang berulang, memperburuk kerentanan ekonomi rumah
+          tangga. Kerusakan lingkungan: Degradasi lahan hijau, penyempitan alur
+          sungai, dan berkurangnya ruang resapan akibat pembangunan yang tidak
+          terkendali akan memperburuk masalah lingkungan dan meningkatkan risiko
+          banjir di masa depan. Pencemaran air: Banjir dapat mencemari sumber
+          air dengan lumpur dan sampah, yang dapat mengancam kesehatan
+          masyarakat. Peningkatan risiko bencana: Jika langkah mitigasi dan tata
+          ruang tidak diperbaiki, banjir cenderung akan berulang, terutama
+          dengan adanya ancaman perubahan iklim.
+        </p>
+      </div>
+
+      <div class="analisis-section">
+        <h2>Solusi</h2>
+        <p>
+          Perbaikan sistem drainase dan saluran air untuk memastikan kuantitas
+          air hujan dapat ditampung dan dialirkan dengan efektif. Pengawasan
+          pembangunan permukiman dan area impervious, serta peningkatan ruang
+          resapan air seperti sumur, taman terbuka, dan penghijauan. Sosialisasi
+          komunitas agar aktif melaporkan banjir atau penyumbatan saluran, serta
+          mengikuti update cuaca dan peringatan dini dari BMKG dan BPBD.
+          Kolaborasi pemerintah dan komunitas dalam perencanaan mitigasi,
+          termasuk pemetaan rawan banjir berdasar data seperti Kajian Risiko
+          Bencana Nasional.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
